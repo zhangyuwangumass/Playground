@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>用户注册</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Sign Up" />
+	<meta name="keywords" content="Sign Up" />
+	
+
+  
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+
+		<link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.login.css')}}">
+		<link rel="stylesheet" href="{{url_for('static',filename='css/animate.login.css')}}">
+		<link rel="stylesheet" href="{{url_for('static',filename='css/style.login.css')}}">
+
+
+		<!-- Modernizr JS -->
+		<script src="{{url_for('static',filename='js/modernizr-2.6.2.min.login.js')}}"></script>
+		<!-- FOR IE9 below -->
+		<!--[if lt IE 9]>
+		<script src="{{url_for('static',filename='js/respond.min.login.js')}}"></script>
+		<![endif]-->
+
+	</head>
+	<body class="style-2">
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<ul class="menu">
+						<li class="active"><a href="login.html">个人用户登录</a></li>
+						<li><a href="login_ent.html">企业用户登录</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					
+
+					<!-- Start Sign In Form -->
+					<form action="#" class="fh5co-form animate-box" data-animate-effect="fadeInLeft" method="post">
+						<h2>注册</h2>
+						<div class="form-group">
+							<div class="alert alert-success" role="alert">注册信息已保存.</div>
+						</div>
+						<div class="form-group">
+							<label for="name" class="sr-only">用户名</label>
+							<input type="text" class="form-control" id="name" placeholder="用户名" autocomplete="off">
+						</div>
+						<div class="form-group">
+							<label for="email" class="sr-only">注册邮箱</label>
+							<input type="email" class="form-control" id="email" placeholder="Email" autocomplete="off">
+						</div>
+						<div class="form-group">
+							<label for="password" class="sr-only">密码</label>
+							<input type="password" class="form-control" id="password" placeholder="密码" autocomplete="off">
+						</div>
+						<div class="form-group">
+							<label for="re-password" class="sr-only">确认密码</label>
+							<input type="password" class="form-control" id="re-password" placeholder="确认密码" autocomplete="off">
+						</div>
+						<div class="form-group">
+							<label for="remember"><input type="checkbox" id="remember">记住我</label>
+						</div>
+						<div class="form-group">
+							<p>已注册用户？<a href="login.html">登录</a></p>
+						</div>
+						<div class="form-group">
+							<input type="submit" value="注册" class="btn btn-primary">
+						</div>
+					</form>
+					<!-- END Sign In Form -->
+
+
+				</div>
+			</div>
+			<div class="row" style="padding-top: 60px; clear: both;">
+				<div class="col-md-12 text-center"><p><small>&copy; All Rights Reserved. More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></small></p></div>
+			</div>
+		</div>
+
+		<!-- jQuery -->
+		<script src="{{url_for('static',filename='js/jquery.min.login.js')}}"></script>
+		<!-- Bootstrap -->
+		<script src="{{url_for('static',filename='js/bootstrap.min.login.js')}}"></script>
+		<!-- Placeholder -->
+		<script src="{{url_for('static',filename='js/jquery.placeholder.min.login.js')}}"></script>
+		<!-- Waypoints -->
+		<script src="{{url_for('static',filename='js/jquery.waypoints.min.login.js')}}"></script>
+		<!-- Main JS -->
+		<script src="{{url_for('static',filename='js/main.login.js')}}"></script>
+
+	</body>
+</html>
+

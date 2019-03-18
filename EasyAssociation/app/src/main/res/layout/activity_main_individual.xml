@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/fragment_individual_main_activity"
+        android:name="com.gilgamesh.pro.easyassociation.fragment.IndividualRegWizFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_individual_slidebar_height"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:background="@android:color/background_dark">
+
+        <ImageButton
+            android:id="@+id/main_individual_regwiz_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/main_individual_slidebar_unit_margin"
+            android:background="@android:color/transparent"
+            android:src="@drawable/test_regwiz"
+            android:scaleType="centerInside"/>
+
+        <ImageButton
+            android:id="@+id/main_individual_ihere_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/main_individual_slidebar_unit_margin"
+            android:background="@android:color/transparent"
+            android:src="@drawable/test_ihere"
+            android:scaleType="centerInside" />
+
+        <ImageButton
+            android:id="@+id/main_individual_ispace_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/main_individual_slidebar_unit_margin"
+            android:background="@android:color/transparent"
+            android:src="@drawable/test_ispace"
+            android:scaleType="centerInside"/>
+
+        <ImageButton
+            android:id="@+id/main_individual_user_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/main_individual_slidebar_unit_margin"
+            android:background="@android:color/transparent"
+            android:src="@drawable/test_user"
+            android:scaleType="centerInside"/>
+
+    </LinearLayout>
+
+</LinearLayout>

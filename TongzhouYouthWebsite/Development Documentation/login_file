@@ -1,0 +1,58 @@
+1.总体需求
+实现用户的注册、登录、profile管理和用户个人信息与其他功能的互动
+
+2.数据
+用户类别：
+worker    社工
+youth    社区青年
+company    企业
+
+注册信息：
+usr    只能填写国内有效手机号
+pwd    8~20位密码，
+
+profile信息：
+	社工：
+	姓名（填写）
+	联系方式（phone，email，wechat）
+	青年汇网点（地图选择）
+	办公地址（填写）
+	社工级别（选择）
+	个人特长（tag选择+申请新增tag）
+
+	社区青年：
+	姓名（填写）
+	联系方式（phone，email，wechat）
+	年龄（填写）
+	关注的活动类型（选择tag）
+	参与活动次数（后台记录）
+	累计参与活动时长（后台记录）
+	志愿者时长（后台记录）
+
+	企业：
+	公司名（填写）
+	联系人姓名（填写）
+	联系方式（phone，email，wechat）
+	公司经营范围（填写）
+	营业执照（照片上传）
+	经营地址（填写）
+	公司简介（填写）
+
+注意：社区青年中关注的活动类型与社工填写的个人特长有关联
+
+3.页面及后台跳转
+登录页面   /login
+方法：login  传参usr，pwd
+方法：toRegister 跳转至register页面
+
+注册页面    /register
+方法：getVerify    获取验证码
+方法：register    提交注册信息
+	type（账号类型）：worker，youth，company
+	usr
+	pwd
+	verify
+
+profile管理页面    /profile
+根据用户不同的类型返回不同的profile管理页面，按照2中规定的数据类型填写用户信息
+方法：save    提交并保存用户信息

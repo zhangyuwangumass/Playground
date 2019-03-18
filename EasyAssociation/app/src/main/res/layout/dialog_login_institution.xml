@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/login_institution_dialog_content"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/transparent">
+
+    <LinearLayout
+        android:layout_width="@dimen/login_individual_dialog_width"
+        android:layout_height="@dimen/login_individual_dialog_height"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:background="@drawable/login_dialog_box"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/login_institution_dialog_content_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/login_individual_entry_dialog_title_margin"
+            android:text="@string/institution_entry_dialog_title"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/login_dialog_title_text"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/login_individual_entry_dialog_studentID_margin"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:text="@string/institution_entry_dialog_name"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/login_dialog_title_text"/>
+
+            <EditText
+                android:id="@+id/login_institution_dialog_name_entry"
+                android:layout_width="@dimen/login_dialog_edittext_width"
+                android:layout_height="@dimen/login_dialog_edittext_height" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/login_individual_entry_dialog_password_margin"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:text="@string/institution_entry_dialog_password"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/login_dialog_title_text"/>
+
+            <EditText
+                android:id="@+id/login_institution_dialog_password_entry"
+                android:layout_width="@dimen/login_dialog_edittext_width"
+                android:layout_height="@dimen/login_dialog_edittext_height" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/login_institution_dialog_button"
+            android:layout_width="@dimen/login_dialog_positive_button_width"
+            android:layout_height="@dimen/login_dialog_positive_button_height"
+            android:layout_marginTop="@dimen/login_individual_entry_dialog_positive_button_margin"
+            android:text="@string/institution_entry_dialog_button"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

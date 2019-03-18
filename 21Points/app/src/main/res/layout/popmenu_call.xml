@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/BET"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="BET"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:background="@android:color/transparent"/>
+
+    <Button
+        android:id="@+id/DOUBLE"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="DOUBLE"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:background="@android:color/transparent"/>
+
+    <Button
+        android:id="@+id/THROW"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="THROW"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:background="@android:color/transparent"/>
+
+    <Button
+        android:id="@+id/GO"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="GO"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:background="@android:color/transparent"/>
+
+    <Button
+        android:id="@+id/RESTART"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="RESTART"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:background="@android:color/transparent"/>
+
+</LinearLayout>

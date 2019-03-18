@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>用户登录</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Login" />
+	<meta name="keywords" content="Login" />
+	
+
+  
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+	
+	<link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.login.css')}}">
+	<link rel="stylesheet" href="{{url_for('static',filename='css/animate.login.css')}}">
+	<link rel="stylesheet" href="{{url_for('static',filename='css/style.login.css')}}">
+
+
+	<!-- Modernizr JS -->
+	<script src="{{url_for('static',filename='js/modernizr-2.6.2.min.login.js')}}"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="{{url_for('static',filename='js/respond.min.login.js')}}"></script>
+	<![endif]-->
+
+		<script src="{{url_for('static',filename='js/action.js')}}"></script>
+
+	</head>
+	<body class="style-2">
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<ul class="menu">
+						<li class="active"><a href="login.html">个人用户登录</a></li>
+						<li><a href="login_ent.html">企业用户登录</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					
+
+					<!-- Start Sign In Form -->
+					<form action="login/user" id="form" class="fh5co-form animate-box" data-animate-effect="fadeInLeft" method="post">
+						<h2>登录</h2>
+						<div class="form-group">
+							<label for="username" class="sr-only">用户名</label>
+							<input type="text" class="form-control" name="username" id="username" placeholder="用户名" autocomplete="off">
+							<p id="user-err-message"></p>
+						</div>
+						<div class="form-group">
+							<label for="password" class="sr-only">密码</label>
+							<input type="password" class="form-control" name="password" id="password" placeholder="密码" autocomplete="off">
+							<p id="pwd-err-message"></p>
+						</div>
+						<div class="form-group">
+							<label for="remember"><input type="checkbox" name="remember" id="remember" value="on">记住我</label>
+						</div>
+						<div class="form-group">
+							<p>未注册？<a href="sign_up.html">注册</a> | <a href="forgot.html">忘记密码？</a></p>
+						</div>
+						<div class="form-group">
+							<input type="button" value="登录" class="btn btn-primary" onclick="submitOnclick()">
+						</div>
+					</form>
+					<!-- END Sign In Form -->
+
+				</div>
+			</div>
+			<div class="row" style="padding-top: 60px; clear: both;">
+				<div class="col-md-12 text-center"><p><small>&copy; All Rights Reserved. More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></small></p></div>
+			</div>
+		</div>
+
+		<script>
+
+            function isValidForm(){
+                var userErrMsg = document.getElementById("user-err-message");
+                var pwdErrMsg = document.getElementById("pwd-err-message");
+
+                var usr = document.getElementById("username").value;
+                var pwd = document.getElementById("password").value;
+
+                var usrPatt1 = /'\W/;
+                var usrPatt2 = /^[_\d]/;
+
+                var valid = true;
+
+                if (usr.length < 8 || usr.length > 25){
+                    userErrMsg.innerText = "用户名长度应为8~25个字符.";
+                    valid = false
+                }
+                else if (usrPatt1.test(usr) || (usrPatt2.test(usr))){
+                    userErrMsg.innerText = "用户名只能包含数字、字母和下划线，且必须以字母开头.";
+                    valid = false;
+                }
+
+                if (pwd.length < 8 || pwd.length > 25){
+                    pwdErrMsg.innerText = "密码长度应为8~25个字符.";
+                    valid = false;
+                }
+
+                return valid;
+            }
+
+            function submitOnclick(){
+                if (isValidForm()){
+                    document.getElementById('form').submit();
+                }
+            }
+
+		</script>
+
+	<!-- jQuery -->
+	<script src="{{url_for('static',filename='js/jquery.min.login.js')}}"></script>
+	<!-- Bootstrap -->
+	<script src="{{url_for('static',filename='js/bootstrap.min.login.js')}}"></script>
+	<!-- Placeholder -->
+	<script src="{{url_for('static',filename='js/jquery.placeholder.min.login.js')}}"></script>
+	<!-- Waypoints -->
+	<script src="{{url_for('static',filename='js/jquery.waypoints.min.login.js')}}"></script>
+	<!-- Main JS -->
+	<script src="{{url_for('static',filename='js/main.login.js')}}"></script>
+
+	</body>
+</html>
+

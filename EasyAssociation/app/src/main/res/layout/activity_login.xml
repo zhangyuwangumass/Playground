@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gilgamesh.pro.easyassociation.activities.LoginActivity"
+    android:background="@drawable/login_background">
+
+    <ImageView
+        android:id="@+id/login_logo"
+        android:layout_width="@dimen/login_logo_sidelength"
+        android:layout_height="@dimen/login_logo_sidelength"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/login_logo_vertical_margin"
+        android:src="@drawable/logo"
+        android:scaleType="centerInside"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/login_version_info"
+        android:layout_marginBottom="@dimen/login_button_to_info_vertical_margin"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/login_individual_button"
+                android:layout_width="@dimen/login_button_sidelength"
+                android:layout_height="@dimen/login_button_sidelength"
+                android:background="@android:color/transparent"
+                android:src="@drawable/individual_login_button"
+                android:scaleType="centerCrop"/>
+
+            <TextView
+                android:id="@+id/login_individual_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="@string/individual_entry_info"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/login_button_text"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/login_institution_button"
+                android:layout_width="@dimen/login_button_sidelength"
+                android:layout_height="@dimen/login_button_sidelength"
+                android:background="@android:color/transparent"
+                android:src="@drawable/institution_login_button"
+                android:scaleType="centerCrop"/>
+
+            <TextView
+                android:id="@+id/login_institution_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="@string/institution_entry_info"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/login_button_text"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/login_version_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/login_app_version_info_margin"
+        android:text="@string/app_version_info"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/login_info_text"/>
+
+    <TextView
+        android:id="@+id/login_company_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/login_company_info_margin"
+        android:text="@string/company_info"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/login_info_text"/>
+
+    <TextView
+        android:id="@+id/login_copyright_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/login_copyright_info_margin"
+        android:text="@string/copyright_info"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/login_info_text"/>
+</RelativeLayout>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+<meta http-equiv="Pragma" content="no-cache"> 
+<meta http-equiv="Cache-Control" content="no-cache"> 
+<meta http-equiv="Expires" content="0"> 
+<title>用户登录</title>
+<link href="/static/css/login.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div class="login_box">
+      <div class="login_l_img"><img src="/static/images/login/login-img.png" /></div>
+      <div class="login">
+          <div class="login_logo"><a href="#"><img src="/static/images/login/login_logo.png" /></a></div>
+          <div class="login_name">
+               <p></p>
+          </div>
+          <form method="post">
+              <input name="username" id="username" type="text" placeholder="用户名" value="" onfocus="this.placeholder='用户名'" onblur="if(!/(^\d+$)/.test(this.value)){this.style='border:1px solid #EA0000'; this.value=''; this.placeholder='用户名必须是有效手机号！'}else{this.style='border: 1px solid #27A9E3';};">
+			  <input name="password" id="password" type="password" placeholder="密码" value="" onfocus="this.placeholder='密码'" onblur="if(this.value.length<8 || this.value.length>20){this.style='border:1px solid #EA0000'; this.value=''; this.placeholder='密码必须为8~20位！';}else{this.style='border: 1px solid #27A9E3';};"/>
+			  <select name="type" id="type">
+				  <option value="null">请选择账号类型</option>
+				  <option value="worker">社工</option>
+				  <option value="youth">青年</option>
+				  <option value="company">企业</option>
+			  </select>
+			  <div id="vcode" style="display:none;">
+				  <div style="width:70%;padding:5px;margin:0px;float:left;box-sizing:border-box;"><input name="verifycode" id="verifycode" type="text" placeholder="验证码" value=""></div>
+				  <div style="width:30%;padding:5px;margin:0px;float:left;box-sizing:border-box;"><button id="verifybutton" type="submit" onclick="this.form.action='/login/getVerifyCode';">获取验证码</button></div>
+			  </div>
+			  <div>
+				  <div style="width:50%;padding:5px;margin:0px;float:left;box-sizing:border-box;"><input value="登录" style="width:100%;" type="button" onclick="if(document.getElementById('username').value.length==0||document.getElementById('password').value.length==0||document.getElementById('type').value=='null'){this.form.reset();}else{this.form.action='/login/login'; this.form.submit();}"></div>
+				  <div style="width:50%;padding:5px;margin:0px;float:left;box-sizing:border-box;"><input value="注册" style="width:100%;" type="button" onclick="if(document.getElementById('verifycode').value.length==0){document.getElementById('vcode').style='display:block';}else{if(document.getElementById('username').value.length==0||document.getElementById('password').value.length==0||document.getElementById('type').value=='null'){this.form.reset();}else{this.form.action='/login/register'; this.form.submit();}}"></div>
+			  </div>
+          </form>
+      </div>
+      <div class="copyright">智蛙科技有限公司 版权所有©2018-2022 技术支持电话：+86-18811555360</div>
+</div>
+<div style="text-align:center;">
+</div>
+<script type="text/ecmascript" src="/static/js/sha1.js"></script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@android:color/background_dark">
+
+    <RelativeLayout
+        android:id="@+id/playground_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/table"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/blackjack"/>
+
+
+        <RelativeLayout
+            android:id="@+id/player_card_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="120dp">
+
+            <ImageView
+                android:id="@+id/handcard_0"
+                android:layout_width="@dimen/card_width"
+                android:layout_height="@dimen/card_height"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="0dp"
+                android:scaleType="centerInside"/>
+
+            <ImageView
+                android:id="@+id/handcard_1"
+                android:layout_width="@dimen/card_width"
+                android:layout_height="@dimen/card_height"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="15dp"
+                android:scaleType="centerInside"/>
+
+            <ImageView
+                android:id="@+id/handcard_2"
+                android:layout_width="@dimen/card_width"
+                android:layout_height="@dimen/card_height"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="30dp"
+                android:scaleType="centerInside"/>
+
+            <ImageView
+                android:id="@+id/handcard_3"
+                android:layout_width="@dimen/card_width"
+                android:layout_height="@dimen/card_height"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="45dp"
+                android:scaleType="centerInside"/>
+
+            <ImageView
+                android:id="@+id/handcard_4"
+                android:layout_width="@dimen/card_width"
+                android:layout_height="@dimen/card_height"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="60dp"
+                android:scaleType="centerInside"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/computer_card_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/player_card_area"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp">
+
+            <ImageView
+                android:id="@+id/computercard_0"
+                android:layout_width="@dimen/card_width"
+                android:layout_height="@dimen/card_height"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="0dp"
+                android:scaleType="centerInside"/>
+
+            <ImageView
+                android:id="@+id/computercard_1"
+                android:layout_width="@dimen/card_width"
+                android:layout_height="@dimen/card_height"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="15dp"
+                android:scaleType="centerInside"/>
+
+            <ImageView
+                android:id="@+id/computercard_2"
+                android:layout_width="@dimen/card_width"
+                android:layout_height="@dimen/card_height"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="30dp"
+                android:scaleType="centerInside"/>
+
+            <ImageView
+                android:id="@+id/computercard_3"
+                android:layout_width="@dimen/card_width"
+                android:layout_height="@dimen/card_height"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="45dp"
+                android:scaleType="centerInside"/>
+
+            <ImageView
+                android:id="@+id/computercard_4"
+                android:layout_width="@dimen/card_width"
+                android:layout_height="@dimen/card_height"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="60dp"
+                android:scaleType="centerInside"/>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/card_dealing_anim"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop"
+            android:background="@android:color/transparent"/>
+
+        <ImageButton
+            android:id="@+id/chips"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="60dp"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/chips"/>
+
+
+        <TextView
+            android:id="@+id/chips_amount"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp"
+            android:layout_toRightOf="@id/chips"
+            android:text="0"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            android:textColor="@android:color/white"
+            android:textAlignment="center"/>
+        
+        <Button
+            android:id="@+id/playground_button_deal"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="DEAL"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:background="@drawable/deal_button_back"
+            />
+
+        <Button
+            android:id="@+id/playground_button_call"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_alignBottom="@id/table"
+            android:layout_alignRight="@id/table"
+            android:layout_marginRight="30dp"
+            android:text="CALL"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:background="@drawable/call_button_back"
+            />
+
+        <TextView
+            android:id="@+id/text_result"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="120dp"
+            android:gravity="center"
+            android:text="Player Win!"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:background="@drawable/trailor_green"
+            android:visibility="visible"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

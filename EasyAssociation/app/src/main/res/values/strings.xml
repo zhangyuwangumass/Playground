@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">EasyAssociation</string>
+    <string name="app_version_info">version 1.1 DEMO</string>
+    <string name="company_info">吉尔伽美什公司 版权所有</string>
+    <string name="copyright_info">Copyright 2016 Gilgamesh. All Rights Reserved</string>
+
+    <string name="individual_entry_info">个人登录</string>
+    <string name="institution_entry_info">组织登录</string>
+
+    <string name="individual_entry_dialog_title">个人登录</string>
+    <string name="individual_entry_dialog_studentID">学号</string>
+    <string name="individual_entry_dialog_password">密码</string>
+    <string name="individual_entry_dialog_button">登录</string>
+
+    <string name="institution_entry_dialog_title">组织登录</string>
+    <string name="institution_entry_dialog_name">名称</string>
+    <string name="institution_entry_dialog_password">密码</string>
+    <string name="institution_entry_dialog_button">登录</string>
+
+</resources>
